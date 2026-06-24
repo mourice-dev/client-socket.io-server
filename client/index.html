@@ -8,14 +8,20 @@
 </head>
 
 <body>
-    <div id="message-container" style="height: 200px; width: 300px; border: 1px solid black;"></div>
+    <select name="" id="status">
+        <option value="connect">connected</option>
+        <option value="disconnect">disconnected</option>
+    </select>
+    <div id="message-container" style="height: 200px; width: 300px; border: 1px solid black;">
+        <div id="user-id" style="background-color: gray; color: white;"></div>
+    </div>
     <form id="form">
         <label for="">Message:</label>
         <input type="text" name="message" id="message">
         <input type="submit" name="" id="send-message"> <br>
         <label for="">Room:</label>
         <input type="text" name="room" id="room">
-        <input type="submit" name="" id="send-room">
+        <input type="button" value="join" name="" id="send-room">
     </form>
     <script src="https://cdn.socket.io/4.8.3/socket.io.min.js"></script>
     <script type="module" src="script.js"></script>
